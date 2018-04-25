@@ -1,7 +1,9 @@
 export default function({ dispatch }) {
-	return next => action => {
-		console.log(action);
+	return function(next) {
+		return function(action) {
+			console.log(action);
 
-		next(action);
-	}
+			next(action);
+		};
+	};
 }
