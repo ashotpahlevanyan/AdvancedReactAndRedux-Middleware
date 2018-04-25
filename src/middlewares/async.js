@@ -1,6 +1,5 @@
 export default function({ dispatch }) {
 	return next => action => {
-		console.log(action);
 		// if the action doesn't have a payload,
 		// or if the payload doesn't have a property .then,
 		// we don't care a bout it, send it on
